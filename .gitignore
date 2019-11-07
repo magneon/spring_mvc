@@ -5,4 +5,14 @@ contas/.settings/
 
 contas/build/classes/
 
+contas/bin
+
 .DS_Store
+
+.tern-project
+
+/.metadata/
+
+/Servers/
+
+/RemoteSystemsTempFiles/
