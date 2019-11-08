@@ -6,6 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Contas</title>
+
+<script src="resources/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+	function contaPaga(resposta) {
+		alert("Conta paga com sucesso!");
+	}
+
+	function pagaAgora(id) {
+		$.get("pagaConta?id=" + id, contaPaga);
+	}
+
+</script>
+
 </head>
 <body>
 
@@ -40,7 +54,12 @@
 				</td>
 				<td>
 					<a href="mostraConta?id=${conta.id}">Alterar</a>
-					<a href="removeConta?id=${conta.id}">Remover</a>
+					| <a href="removeConta?id=${conta.id}">Remover</a>
+					<c:choose>
+						<c:when test="${conta.paga eq false}">
+							| <a href="#" onclick="pagaAgora(${conta.id});">Pagar</a>
+						</c:when>
+					</c:choose> 
 				</td>
 			</tr>
 		</c:forEach>
