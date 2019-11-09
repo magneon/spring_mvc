@@ -65,5 +65,9 @@
 		</c:forEach>
 	</table>
 	
+	<br/>
+	
+	<a href="logout">Sair</a>
+	
 </body>
 </html>
